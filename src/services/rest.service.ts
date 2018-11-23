@@ -50,6 +50,7 @@ export class RestService {
       });
   }
 
+ // Get the participant, associated with the authenticated user's identity card.
   getCurrentUser() {
     return this.httpClient.get('http://localhost:3000/api/system/ping', {withCredentials: true}).toPromise()
       .then((data) => {

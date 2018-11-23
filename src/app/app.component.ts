@@ -45,6 +45,7 @@ export class AppComponent implements OnInit {
       .subscribe((queryParams) => {
         const loggedIn = queryParams['loggedIn'];
         if (loggedIn) {
+          // We are now REST Server authenticated
           this.authenticated = true;
           return this.router.navigate(['/'])
             .then(() => {
@@ -58,6 +59,8 @@ export class AppComponent implements OnInit {
     return this.restService.checkWallet()
       .then((results) => {
         if (results['length'] > 0) {
+          // The wallet has at least one identity card.
+          // We are now logged into business network,becos we have identity .
           this.loggedIn = true;
           return this.getCurrentUser()
             .then(() => {
@@ -90,6 +93,7 @@ export class AppComponent implements OnInit {
       });
   }
 
+  // Get the participant, associated with the authenticated user's identity card.
   getCurrentUser() {
     return this.restService.getCurrentUser()
       .then((currentUser) => {

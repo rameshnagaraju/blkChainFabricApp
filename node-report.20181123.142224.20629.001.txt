@@ -1,0 +1,203 @@
+================================================================================
+==== Node Report ===============================================================
+
+Event: exception, location: "OnUncaughtException"
+Filename: node-report.20181123.142224.20629.001.txt
+Dump event time:  2018/11/23 14:22:24
+Module load time: 2018/11/23 14:22:24
+Process ID: 20629
+Command line: node /Users/rameshn/.nvm/versions/node/v8.9.0/bin/composer archive list -a basic-sample.bna
+
+Node.js version: v8.9.0
+(http_parser: 2.7.0, v8: 6.1.534.46, uv: 1.15.0, zlib: 1.2.11, ares: 1.10.1-DEV,
+ modules: 57, nghttp2: 1.25.0, openssl: 1.0.2l, icu: 59.1, unicode: 9.0,
+ cldr: 31.0.1, tz: 2017b)
+
+node-report version: 2.2.1 (built against Node.js v8.9.0, 64 bit)
+
+OS version: Darwin 15.2.0 Darwin Kernel Version 15.2.0: Fri Nov 13 19:56:56 PST 2015; root:xnu-3248.20.55~2/RELEASE_X86_64
+
+Machine: RAMESHs-MacBook-Pro.local x86_64
+
+================================================================================
+==== JavaScript Stack Trace ====================================================
+
+Object.parseArgs [as _parseArgs] (/Users/rameshn/.nvm/versions/node/v8.9.0/lib/node_modules/composer-cli/node_modules/yargs/yargs.js:1:1)
+Object.get [as argv] (/Users/rameshn/.nvm/versions/node/v8.9.0/lib/node_modules/composer-cli/node_modules/yargs/yargs.js:1:1)
+Object.<anonymous> (/Users/rameshn/.nvm/versions/node/v8.9.0/lib/node_modules/composer-cli/cli.js:1:1)
+Module._compile (module.js:1:1)
+Object.Module._extensions..js (module.js:1:1)
+Module.load (module.js:1:1)
+tryModuleLoad (module.js:1:1)
+Function.Module._load (module.js:1:1)
+Function.Module.runMain (module.js:1:1)
+startup (bootstrap_node.js:1:1)
+bootstrap_node.js:1:1
+
+================================================================================
+==== Native Stack Trace ========================================================
+
+ 0: [pc=0x104f4f5c1] nodereport::OnUncaughtException(v8::Isolate*) [/Users/rameshn/.nvm/versions/node/v8.9.0/lib/node_modules/composer-cli/node_modules/node-report/api.node]
+ 1: [pc=0x10064a723] v8::internal::Isolate::Throw(v8::internal::Object*, v8::internal::MessageLocation*) [/Users/rameshn/.nvm/versions/node/v8.9.0/bin/node]
+ 2: [pc=0x1007f551b] v8::internal::Runtime_Throw(int, v8::internal::Object**, v8::internal::Isolate*) [/Users/rameshn/.nvm/versions/node/v8.9.0/bin/node]
+ 3: [pc=0xe3ad148463d] 
+
+================================================================================
+==== JavaScript Heap and Garbage Collector =====================================
+
+Heap space name: new_space
+    Memory size: 33,554,432 bytes, committed memory: 17,054,536 bytes
+    Capacity: 16,498,688 bytes, used: 2,446,480 bytes, available: 14,052,208 bytes
+Heap space name: old_space
+    Memory size: 18,173,952 bytes, committed memory: 17,734,072 bytes
+    Capacity: 17,814,184 bytes, used: 17,426,976 bytes, available: 387,208 bytes
+Heap space name: code_space
+    Memory size: 2,097,152 bytes, committed memory: 1,368,032 bytes
+    Capacity: 1,302,496 bytes, used: 1,302,496 bytes, available: 0 bytes
+Heap space name: map_space
+    Memory size: 1,593,344 bytes, committed memory: 1,245,168 bytes
+    Capacity: 1,529,416 bytes, used: 1,210,352 bytes, available: 319,064 bytes
+Heap space name: large_object_space
+    Memory size: 2,928,640 bytes, committed memory: 2,928,640 bytes
+    Capacity: 1,443,980,448 bytes, used: 2,872,992 bytes, available: 1,441,107,456 bytes
+
+Total heap memory size: 58,347,520 bytes
+Total heap committed memory: 40,330,448 bytes
+Total used heap memory: 25,259,296 bytes
+Total available heap memory: 1,455,865,936 bytes
+
+Heap memory limit: 1,501,560,832
+
+================================================================================
+==== Resource Usage ============================================================
+
+Process total resource usage:
+  User mode CPU: 0.614532 secs
+  Kernel mode CPU: 0.113685 secs
+  Average CPU Consumption : 72.8217%
+  Maximum resident set size: 67,989,667,840 bytes
+  Page faults: 37 (I/O required) 16617 (no I/O required)
+  Filesystem activity: 16 reads 3 writes
+
+================================================================================
+==== Node.js libuv Handle Summary ==============================================
+
+(Flags: R=Ref, A=Active)
+Flags  Type      Address             Details
+[-A]   async     0x0000000102306750  
+[--]   check     0x00007fff5fbfe9f8  
+[R-]   idle      0x00007fff5fbfea70  
+[--]   prepare   0x00007fff5fbfeb80  
+[--]   check     0x00007fff5fbfebf8  
+[R-]   timer     0x00007fff5fbfeae8  repeat: 0, timeout in: 4101611767 ms
+[-A]   async     0x00000001015a1038  
+[RA]   async     0x00000001027048c0  
+[RA]   async     0x0000000102706130  
+[R-]   timer     0x00000001027051b0  repeat: 0, timeout expired: 229284105 ms ago
+[R-]   tty       0x0000000102704d48  width: 179, height: 48, file descriptor: 10, write queue size: 0, writable
+[-A]   signal    0x0000000104800360  signum: 28 (SIGWINCH)
+[R-]   tty       0x0000000104800518  width: 179, height: 48, file descriptor: 12, write queue size: 0, writable
+[RA]   async     0x0000000102315af0  
+[RA]   async     0x0000000102402230  
+[RA]   async     0x0000000102315300  
+[RA]   async     0x0000000102313b00  
+[RA]   async     0x00000001023301f0  
+[RA]   async     0x00000001023122d0  
+[RA]   async     0x00000001023353b0  
+[RA]   async     0x0000000104800a90  
+[-A]   async     0x0000000104f56f70  
+[RA]   async     0x00000001023315a0  
+
+================================================================================
+==== System Information ========================================================
+
+Environment variables
+  SPARK_HOME=/Users/rameshn/spark
+  TERM_PROGRAM=Apple_Terminal
+  NVM_CD_FLAGS=
+  SHELL=/bin/bash
+  TERM=xterm-256color
+  TMPDIR=/var/folders/d6/1gmpx3cx2d39gty8_28l_n1m0000gn/T/
+  Apple_PubSub_Socket_Render=/private/tmp/com.apple.launchd.7aWV67XR8V/Render
+  TERM_PROGRAM_VERSION=361.1
+  OLDPWD=/Users/rameshn/dove
+  TERM_SESSION_ID=7150E522-D60B-403E-9E15-BEE7F1FE1594
+  NVM_DIR=/Users/rameshn/.nvm
+  USER=rameshn
+  SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.9lhNoEyuEL/Listeners
+  __CF_USER_TEXT_ENCODING=0x1F5:0x0:0x0
+  FABRIC_VERSION=hlfv11
+  PATH=/Users/rameshn/.nvm/versions/node/v8.9.0/bin:/usr/local/lib/node_modules/@angular/cli/bin:/usr/local/bin:/usr/local/opt/node@8/bin:/Applications/XAMPP/xamppfiles/bin:/usr/local/bin:/usr/bin:/bin::/Users/rameshn/maven/apache-maven-3.3.9/bin:/bin:/Users/rameshn/spark/bin:/Users/rameshn/anaconda2/bin
+  PWD=/Users/rameshn/dove/collectable-penguin-app
+  JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home
+  NODE_PATH=/Users/rameshn/.nvm/versions/node/v8.9.0/lib/node_modules:
+  XPC_FLAGS=0x0
+  XPC_SERVICE_NAME=0
+  M2_HOME=/Users/rameshn/maven/apache-maven-3.3.9
+  SHLVL=1
+  HOME=/Users/rameshn
+  LOGNAME=rameshn
+  LC_CTYPE=UTF-8
+  NVM_BIN=/Users/rameshn/.nvm/versions/node/v8.9.0/bin
+  _=/Users/rameshn/.nvm/versions/node/v8.9.0/bin/composer
+
+Resource limits                        soft limit      hard limit
+  core file size (blocks)                       0       unlimited
+  data seg size (kbytes)                unlimited       unlimited
+  file size (blocks)                    unlimited       unlimited
+  max locked memory (bytes)             unlimited       unlimited
+  max memory size (kbytes)              unlimited       unlimited
+  open files                                10240       unlimited
+  stack size (bytes)                      8388608        67104768
+  cpu time (seconds)                    unlimited       unlimited
+  max user processes                          709            1064
+  virtual memory (kbytes)               unlimited       unlimited
+
+Loaded libraries
+  /Users/rameshn/.nvm/versions/node/v8.9.0/bin/node
+  /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+  /usr/lib/libSystem.B.dylib
+  /usr/lib/libc++.1.dylib
+  /usr/lib/libauto.dylib
+  /usr/lib/libDiagnosticMessagesClient.dylib
+  /usr/lib/libicucore.A.dylib
+  /usr/lib/libobjc.A.dylib
+  /usr/lib/libz.1.dylib
+  /usr/lib/libc++abi.dylib
+  /usr/lib/system/libcache.dylib
+  /usr/lib/system/libcommonCrypto.dylib
+  /usr/lib/system/libcompiler_rt.dylib
+  /usr/lib/system/libcopyfile.dylib
+  /usr/lib/system/libcorecrypto.dylib
+  /usr/lib/system/libdispatch.dylib
+  /usr/lib/system/libdyld.dylib
+  /usr/lib/system/libkeymgr.dylib
+  /usr/lib/system/liblaunch.dylib
+  /usr/lib/system/libmacho.dylib
+  /usr/lib/system/libquarantine.dylib
+  /usr/lib/system/libremovefile.dylib
+  /usr/lib/system/libsystem_asl.dylib
+  /usr/lib/system/libsystem_blocks.dylib
+  /usr/lib/system/libsystem_c.dylib
+  /usr/lib/system/libsystem_configuration.dylib
+  /usr/lib/system/libsystem_coreservices.dylib
+  /usr/lib/system/libsystem_coretls.dylib
+  /usr/lib/system/libsystem_dnssd.dylib
+  /usr/lib/system/libsystem_info.dylib
+  /usr/lib/system/libsystem_kernel.dylib
+  /usr/lib/system/libsystem_m.dylib
+  /usr/lib/system/libsystem_malloc.dylib
+  /usr/lib/system/libsystem_network.dylib
+  /usr/lib/system/libsystem_networkextension.dylib
+  /usr/lib/system/libsystem_notify.dylib
+  /usr/lib/system/libsystem_platform.dylib
+  /usr/lib/system/libsystem_pthread.dylib
+  /usr/lib/system/libsystem_sandbox.dylib
+  /usr/lib/system/libsystem_secinit.dylib
+  /usr/lib/system/libsystem_trace.dylib
+  /usr/lib/system/libunc.dylib
+  /usr/lib/system/libunwind.dylib
+  /usr/lib/system/libxpc.dylib
+  /Users/rameshn/.nvm/versions/node/v8.9.0/lib/node_modules/composer-cli/node_modules/node-report/api.node
+
+================================================================================
